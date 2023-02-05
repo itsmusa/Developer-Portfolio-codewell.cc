@@ -36,8 +36,8 @@ This is my solution 😃
 
 ### Links
 
-- Solution URL 🌐: [solution source code](https://your-solution-url.com)
-- Live Site URL 🌐: [live website](https://your-live-site-url.com)
+- Solution URL 🌐: [solution source code](https://github.com/itsmusa/Developer-Portfolio-codewell.cc)
+- Live Site URL 🌐: [live website](https://portfolio-three-pink-38.vercel.app/)
 
 ## My process
 
