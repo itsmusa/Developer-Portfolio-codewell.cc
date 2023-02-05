@@ -1,0 +1,142 @@
+$black: #0a0a0b;
+$greyIsh: #888888;
+$grey: #2e3038;
+$yellow: #fbe850;
+$white: #ffffff;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    color: $white;
+    font-family: sans-serif;
+    background-color: $black;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+    font-weight: 500;
+
+    @include breakpoint-up(medium) {
+        font-size: 3rem;
+    }
+}
+
+h2 {
+    font-size: 1.875rem;
+    line-height: 1.1;
+    font-weight: 500;
+
+    @include breakpoint-up(large) {
+        font-size: 2rem;
+    }
+}
+
+p, blockquote {
+    font-size: 0.875rem;
+    color: $greyIsh;
+    font-weight: 400;
+
+    @include breakpoint-up(large) {
+        font-size: 1rem;
+    }
+}
+
+blockquote {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.serif {
+    font-family: serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.logo {
+    font-size: 1.25rem;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.125rem;
+    background-color: $yellow;
+    padding: 9px 24px;
+    border: 1px solid $yellow;
+    cursor: pointer;
+    transition: .35s ease-in-out;
+    
+    &:hover {
+        background: none;
+        border-color: $yellow;
+        color: $yellow
+    }
+}
+
+.hide-for-mobile {
+    @include breakpoint-down(large) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(xxlarge) {
+        display: none;
+    }
+}

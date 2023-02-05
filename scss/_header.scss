@@ -1,0 +1,109 @@
+.header {
+    margin-bottom: 3rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $greyIsh;
+    visibility: hidden;
+    transform: scale(0.1);
+    opacity: 0.1;
+    pointer-events: none;
+    transition: .3s ease-in-out;
+
+    &.open {
+        visibility: visible;
+        pointer-events: all;
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    @include breakpoint-up(xxlarge) {
+        margin-top: 2rem;
+    }
+
+    &__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        display: grid;
+        grid-auto-rows: max-content;
+        width: 0;
+        max-width: 300px;
+        height: 100vh;
+        padding: 2rem;
+        background-color: $black;
+        visibility: hidden;
+        transition: .3s ease-in-out;
+
+        &.open {
+            visibility: visible;
+            width: 70%;
+            right: 0;
+        }
+
+        @include breakpoint-up(xxlarge) {
+            position: static;
+            height: auto;
+            width: fit-content;
+            background: none;
+            padding: 0;
+            visibility: visible;
+        }
+    }
+
+    &__close {
+        justify-self: end;
+        cursor: pointer;
+    }
+
+    &__open {
+        cursor: pointer;
+    }
+
+    &__list {
+        margin-top: 2rem;
+
+        @include breakpoint-up(xxlarge) {
+            display: flex;
+            margin: 0;
+        }
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+
+        @include breakpoint-up(xxlarge) {
+            margin-bottom: 0;
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 1.125rem;
+        color: $greyIsh;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            color: $yellow;
+        }
+
+        @include breakpoint-up(xxlarge) {
+            font-size: 1rem;
+        }
+    }
+}

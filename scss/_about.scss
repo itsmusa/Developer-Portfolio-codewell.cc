@@ -1,0 +1,50 @@
+.about {
+    background-color: $grey;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+
+    @include breakpoint-up(xxlarge) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .container {
+        @include breakpoint-up(xxlarge) {
+            display: grid;
+            grid-template-areas: 
+            "heading text2"
+            "text1 text2";
+            column-gap: 3rem;
+
+            .text {
+                grid-area: text1;
+            }
+
+            .text-two {
+                grid-area: text2;
+            }
+        }
+    }
+
+    &__heading {
+        margin-bottom: 1rem;
+
+        @include breakpoint-up(xxlarge) {
+            grid-area: heading;
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        margin-bottom: 2rem;
+
+        @include breakpoint-up(xxlarge) {
+            margin-bottom: 0;
+        }
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+}

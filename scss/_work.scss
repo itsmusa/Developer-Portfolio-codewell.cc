@@ -1,0 +1,47 @@
+.work {
+    margin-bottom: 3rem;
+
+    .container {
+        @include breakpoint-up(xxlarge) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+    }
+
+    &__card {
+        margin-bottom: 2rem;
+    }
+
+    &__image {
+        max-height: 250px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
+
+    &__link {
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin-bottom: 1rem;
+
+        svg {
+            margin-top: 0.5rem;
+        }
+
+        span {
+            transition: .3s ease-in-out;
+        }
+
+        &:hover span {
+            margin-right: 1rem;
+        }
+    }
+}
