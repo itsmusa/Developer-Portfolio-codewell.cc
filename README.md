@@ -69,4 +69,3 @@ Going forward I want to continue using CSS grid and CSS animations as I am still
 ## Author
 
 - Github - [Musa Magwaza](https://www.github.com/itsmusa)
-- Twitter - [@flawedgoat](https://www.twitter.com/flawedgoat)
